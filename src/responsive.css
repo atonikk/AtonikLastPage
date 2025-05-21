@@ -1,0 +1,318 @@
+/* responsive.css */
+
+/* Estilos generales */
+
+.home-container {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+.social-buttons {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  gap: 1.5rem;
+}
+.social-icon {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.home-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  gap: 1rem;
+  padding: 1rem;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.home-link:hover {
+  color: #6e6e6e;
+}
+
+.home-content {
+  display: flex;
+}
+.home-images {
+  width: 100%;
+}
+
+.home-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.home-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.atonik-logo {
+  width: 50px;
+  height: auto;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.store-button {
+  display: inline-block;
+  width: 200px;
+}
+
+.store-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.store-image:hover {
+  transform: scale(1.1);
+}
+
+.store-image {
+  width: 100%;
+  height: auto;
+}
+.mockup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  position: relative;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.home-grid-item {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.grid-title {
+  font-size: clamp(1.6rem, 2.6vw, 1.8rem);
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.grid-description {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  text-align: center;
+  border-radius: 10px;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Estilos para tablets y dispositivos con pantallas medianas */
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .caja-mockups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: relative;
+    height: 300px; /* Ajusta según tu diseño */
+  }
+
+  .mockup-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    position: absolute;
+    top: 50px; /* Para bajar un poco las cartas */
+    transition: transform 0.3s ease;
+  }
+
+  .mockup-1 {
+    transform: rotate(-15deg) translateX(-80px);
+    z-index: 0;
+  }
+
+  .mockup-2 {
+    transform: rotate(15deg) translateX(80px);
+    z-index: 0;
+  }
+
+  .mockup-3 {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+
+  .home-text {
+    text-align: center;
+    margin-top: 8rem;
+  }
+  .home-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .store-button {
+    width: 160px;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  /* Estilos para pantallas grandes de computadores */
+
+  .home-container {
+    padding: 2rem;
+  }
+  .home-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .home-nav {
+    width: 75%;
+  }
+  .home-images {
+    height: 500px;
+  }
+  .home-title {
+    font-size: 3.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 2rem;
+  }
+
+  .grid-title {
+    font-size: clamp(2rem, 3vw, 2.2rem);
+  }
+
+  .grid-description {
+    font-size: clamp(1.4rem, 2.2vw, 1.6rem);
+  }
+
+  .mockup-image {
+    width: 180px;
+    margin-top: 12%;
+    margin-left: -5%;
+  }
+
+  .mockup-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .mockup-1 {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    border-radius: 10px;
+    transform: rotate(-15deg);
+    z-index: -1;
+  }
+
+  .mockup-2 {
+    position: absolute;
+    top: 20px;
+    left: 460px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    z-index: -1;
+  }
+
+  /* Delante */
+  .mockup-3 {
+    position: absolute;
+    top: 30px;
+    left: 350px;
+    border-radius: 10px;
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+  .store-button {
+    width: 240px;
+  }
+}
+@media (max-width: 480px) {
+  /* Estilos para móviles y dispositivos con pantallas pequeñas */
+
+  .home-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .home-link {
+    font-size: 0.9rem;
+  }
+
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .store-button {
+    width: 160px;
+  }
+}
